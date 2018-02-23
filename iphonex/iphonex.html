@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ <style type="text/css">
+ body{
+ font-family:Open Sans;
+ }
+
+	a{
+	   margin-right:10px;
+	}
+	a:link {
+		color:grey;
+		font-size:12px;
+		text-decoration: none;
+		}
+     a:hover{
+		color:white;
+		}
+	.container{
+		height: 25px;
+		width: 100%;
+		padding:2px;
+		border-collapse: collapse;
+		background-color:#262626;
+		color:grey;
+	}
+     .f-nav{ 
+         z-index: 9999; 
+         position: fixed;  top: 0;
+         width: 100%;
+     }
+	.nav{
+		height:65px;
+		width: 100%;
+		background-color: whitesmoke;
+		position:fixed;     
+	}
+     .nav-menu{
+        position: absolute;
+        right:20px;
+        top:35%;
+        
+     }
+	#slider{
+		margin-top:44px;
+		height:500px;
+		width: 100%;
+	}
+     #nextslajd{
+         border-radius: 360px;
+         position:absolute;
+         top:40%;
+         right:20px;
+         height:50px;
+         width:50px;
+     }
+     #beforeslajd{
+         border-radius: 360px;
+         position:absolute;
+         top:40%;
+         left:20px;
+         height:50px;
+         width:50px;
+     }
+	.content{
+		height:4200px;
+		width: 100%;
+        position:relative;
+	}
+	.footer{
+		height:60px;
+		width: 100%;
+        background-color: whitesmoke;
+	}
+    #czarny{
+        width:30px;
+        height:30px;
+        border-radius: 300px;
+        background-color: black;
+        
+        
+    }
+    #bialy{
+        width:30px;
+        height:30px;
+        border-radius: 300px;
+        background-color: silver;
+     }
+     #ciemnymotyw{
+        width:15px;
+        height:15px;
+        border-radius: 300px;
+        background-color: black;
+     }
+     
+     .linki{
+         position: absolute;
+         bottom:5px;
+     }
+     .linkibaner{
+         position: absolute;
+        bottom: 200px;
+         background-color: whitesmoke;
+         width:100%;
+         text-align: center;
+     }
+     .colorbaner{
+         position: absolute;
+        bottom: 700px;
+         background-color: whitesmoke;
+         width:100%;
+         text-align: center;
+     }
+    .pierwszybaner{
+         position: absolute;
+        top: -40px;
+         background-color: whitesmoke;
+         width:100%;
+         text-align: center;
+     }
+     .specyfikacjabaner{
+         position:absolute;
+         top:1400px;
+         background-color: whitesmoke;
+         width:100%;
+         text-align: center;
+     }
+
+</style>
+    	<script type="text/javascript">
+
+   function whiteversion(){
+	var plik = "<img src=\"silver.png\">"
+	document.getElementById("iphonecolor").innerHTML=plik;
+	}
+        
+    function blackversion(){
+	var plik = "<img src=\"black.png\">"
+	document.getElementById("iphonecolor").innerHTML=plik;
+	}
+	
+	</script>
+<script>
+
+jQuery("document").ready(function($){
+
+	var nav = $('.nav');
+
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > 25) {
+			nav.addClass("f-nav");
+		} else {
+			nav.removeClass("f-nav");
+		}
+	});
+
+});
+</script>
+
+<script type="text/javascript">
+	
+	var numer = 1;
+	
+	function zmienslajd(){
+	numer ++; if (numer>3) numer=1;
+	var plik = "<img src=\"slajd" + numer + ".jpg\" >"
+	
+	document.getElementById("slider").innerHTML=plik;
+	
+	setTimeout("zmienslajd()",10000);
+	}
+
+	</script>
+<script>
+function ciemnymotyw(){
+document.body.style.backgroundColor = "black";
+    document.body.style.color="white";
+    alert("Strona ma teraz ciemny motyw. Aby powrócić do wcześniejszej wersji odśwież stronę!")
+}
+</script>
+    
+</head>
+
+
+<body onload="zmienslajd();">
+
+                                    <!--LINKI -->
+<div class="container"> <a href="wp.pl" style="margin-right:15px;" >   FACEBOOK  </a> |
+<a href="wp.pl" >   TWITTER  </a> |
+<a href="wp.pl" >   GOOGLE  </a> |</div>
+
+
+                                <!--PASEK NAWIGACYJNY -->
+<div class="nav">
+<h3 style="margin-left:20px;; margin-top:20px;">iPhone X</h3>
+    <div class="nav-menu"> 
+             <button id="ciemnymotyw" onclick="ciemnymotyw();"></button>
+        <a href="#specyfikacja" style="margin-right:15px;" >   Specyfikacja  </a> |
+<a href="#iphonecolor" >   Konfiguruj  </a> |
+<a href="#links" >   Kupuj  </a> 
+
+    </div>
+    
+ </div>
+
+ 
+<br>
+                                <!--SLIDER -->
+<div id="slider"></div>
+<button onclick="zmienslajd()" id="nextslajd">></button>
+<button onclick="zmienslajd()" id="beforeslajd"><</button>
+<br><br>
+
+<div class="content"> 
+<div class="pierwszybaner"><h3>Poznaj iPhone X</h3></div>
+    <div>
+    <img src="https://support.apple.com/content/dam/edam/applecare/images/en_US/iphone/iphonex/iphone-x-wireless-charging_2x.png" style="margin-top: 50px; float:left;"/>
+        <h1 style="position:absolute; top:160px; right: 50px; color:dimgrey;">Udoskonalone bezprzewodowe ładowanie</h1>
+    </div>
+    
+    <div>
+    <img src="https://www.rogers.com/cms/rogers/page-specific/wireless/iphone-x/images/hardware-splash.png" style="margin-top: 400px; float:right; height:480px; width:auto;"/>
+        <h1 style="position:absolute; top:600px; left: 50px; color:dimgrey;  ">Odporny na wszystko</h1>
+    </div>
+    
+    <div>
+    <img src="https://d2giyh01gjb6fi.cloudfront.net/default/0001/88/thumb_87964_default_big.png" style="margin-top: 900px; float:left; height:480px; width:auto;"/>
+        <h1 style="position:absolute; top:1000px; right: 50px; color:dimgrey;  ">Jedyne czego mu brak to... ramek</h1>
+    </div>
+     <div class="specyfikacjabaner" id="specyfikacja"><h3>Specyfikacja</h3></div>
+    <div >
+    <div style="position:absolute; bottom:780px;">
+<h3>APPLE IPHONE X</h3>
+        
+Producent	Apple <hr>
+Rodzina	Apple iPhone <hr>
+Segment	Smartfon flagowy <hr>
+System operacyjny	iOS 11 <hr>
+Data premiery	2017
+        <h3>Ekran</h3><hr>
+Przekątna ekranu	5.8 cali<hr>
+Rozdzielczość ekranu	2436 x 1125<hr>
+Rodzaj matrycy	OLED<hr>
+Zagęszczenie pikseli	458 ppi<hr>
+Procesor<hr>
+Model procesora	Apple A11<hr>
+Liczba rdzeni	sześciordzeniow<hr>y
+        <h3>Pamięć</h3>
+Maksymalna pamięć operacyjna	3 GB RAM<hr>
+Maksymalna pamięć wewnętrzna	256 GB<hr>
+Obsługa kart microSD	nie<hr>
+        <h3>Aparat główny</h3><hr>
+Rozdzielczość matrycy	12 Mpix<hr>
+Jasność przysłony	f/1,8<hr>
+Optyczna stabilizacja obrazu	tak<hr>
+Dioda doświetlająca	poczwórna<hr>
+Druga matryca	12 Mpix, teleobiektyw (dwukrotne optyczne przybliżenie), f/2,4<hr>
+        <h3>Aparat przedni</h3><hr>
+Rozdzielczość matrycy	7 Mpix<hr>
+Jasność przysłony	f/2,2<hr>
+        <h3>Łączność</h3><hr>
+LTE	tak<hr>
+WiFi	802.11 a, b, g, n, ac, dwuzakresowe<hr>
+Bluetooth	5.0<hr>
+GPS	GPS, A-GPS, Glonass, BeiDou<hr>
+NFC	tak<hr>
+USB	Lightning<hr>
+Dual SIM	nie<hr>
+        <h3>Zabezpieczenia i czujniki</h3><hr>
+Czytnik linii papilarnych	nie<hr>
+Czujniki	akcelerometr, żyroskop, zbliżeniowy, oświetlenia, cyfrowy kompas, skaner twarzy<hr>
+        <h3>Wymiary i waga</h3><hr>
+Wymiary	143,6 x 70,9 x 7,7 mm<hr>
+Waga	174 g<hr>
+        <h3>Inne</h3><hr>
+Stopień ochrony	IP67<hr>
+        </div>      
+        
+    </div>
+                                 <!-- WYBOR KOLORU -->
+<div class="colorbaner"><h3 >Skonfiguruj swojego iPhone</h3></div>
+	<div style="position: absolute; right:45%; bottom: 300px;">
+        <div id="iphonecolor" ><img src="silver.png"><br></div>
+        <div style="position:relative; left:50px;">
+    <button id="czarny" onclick="blackversion()"></button>
+    <button id="bialy" onclick="whiteversion()"></button>
+        </div>
+        </div>
+
+                                <!--GDZIE KUPIC -->
+
+    <div class="linkibaner"><h3 >Kup już teraz!</h3></div>
+    <div class="linki" id="links">
+        <a href="https://www.apple.com/pl/shop/buy-iphone/iphone-x">
+        <img src="http://www.komputerswiat.pl/media/2017/265/5764692/apple_p.jpg" id="logo" style="height:50%;width:24%;"></a>
+        <a href="https://www.mediaexpert.pl/smartfony/smartfon-apple-iphone-x-64gb-srebrny,id-986780">
+        <img src="http://www.komputerswiat.pl/media/2017/79/5290747/me_p.jpg" id="logo" style="height:50%;width:24%;"></a>
+        <a href="https://mediamarkt.pl/telefony-i-smartfony/smartfon-apple-iphone-x-256gb-srebrny-mqag2pm-a">
+        <img src="http://www.komputerswiat.pl/media/2017/73/5273784/mm_p.jpg" id="logo" style="height:50%;width:24%;"></a>
+        <a href="https://saturn.pl/telefony-i-smartfony/smartfon-apple-iphone-x-256gb-srebrny-mqag2pm-a">
+        <img src="http://www.komputerswiat.pl/media/2017/87/5330585/sat_p.jpg" id="logo" style="height:50%;width:24%;"></a>
+        </div>
+
+    
+    </div>
+<div class="footer"> <h4 style="color:grey;">Copyright by Szymon Michon</h4> </div>
+    
+ 
+</body>
+</html>
