@@ -1,0 +1,79 @@
+<html>
+
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Gochi+Hand" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <script src="scripts.js"></script>
+    </head>
+    <body>
+        
+        <!-- menu glowne -->
+        <div id="menu"> 
+        <ul>
+         <li>  <div class="hamburger" onclick="openNav()">
+              <div class="bar1"></div>
+              <div class="bar2"></div>
+              <div class="bar3"></div>
+            </div> </li> 
+       
+       <li> <a href="index.html">TROJKAT</a> </li>
+       <li> <a href="kwadrat.html">KWADRAT</a> </li>
+       <li> <a href="rownoleglobok.html">ROWNOLEGLOBOK</a> </li>
+       <li> <a href="kolo.html">KOLO</a> </li>
+       <li> <a href="trapez.html">TRAPEZ</a> </li>
+       <li> <a href="romb.html">ROMB</a> </li>
+       <li> <a href="prostokat.html">PROSTOKAT</a> </li>
+        </ul> 
+            
+        </div>
+        
+        
+        <!-- menu wysuwane -->
+        <div id="myNav" class="overlay">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <div class="overlay-content">
+           <a href="index.html">TROJKAT</a> 
+           <a href="kwadrat.html">KWADRAT</a> 
+           <a href="rownoleglobok.html">ROWNOLEGLOBOK</a> 
+           <a href="kolo.html">KOLO</a>
+           <a href="trapez.html">TRAPEZ</a> 
+           <a href="romb.html">ROMB</a>
+           <a href="prostokat.html">PROSTOKAT</a> 
+          </div>
+        </div>
+        
+
+
+    <!-- wpisywanie wartosci -->
+     
+        <div id="content"> 
+        <div id="values">
+        <h3 style="font-family: 'Gochi Hand';">WPISZ DANE:</h3>
+        <form>
+        <input type="text" placeholder="wpisz a" id="a"> <br> <br>
+        <input type="text" placeholder="wpisz b" id="b"> <br> <br>
+        <input type="text" placeholder="wpisz c" id="c"> <br> <br>
+        <input type="text" placeholder="wpisz h" id="h"> <br> <br>
+            <button onclick="poleTrojkata()">POLE</button>
+            <button onclick="obwodTrojkata()">OBWOD</button>
+        </form>    
+        </div>
+         </div>
+        
+        
+        <!-- wyniki widoczne po obliczeniu -->
+        <div id="results">
+            <h3 style="font-family: 'Gochi Hand';">ROZWIAZANIE:</h3>
+        <div id="wyniki"></div>
+        <h4 style="font-family: 'Gochi Hand';">WYTLUMACZENIE: </h4>
+        <p id="howto"></p>
+     
+        </div>
+       
+        <div id="triangle">
+        <img src="http://www.matmana6.pl/zdjecia/szkola_srednia/figury_plaskie_planimetria/rownoleglobok_86.png">
+        </div>
+    
+    
+    </body>
+</html>

@@ -1,0 +1,145 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+        body {
+              cursor: crosshair;
+            background-image: url(mosquito-wallpaper.jpg);
+            }
+        .wynik{
+            position:absolute;
+            top:10px;
+            right:10px;
+            
+        }
+
+
+    
+@keyframes fly {
+      100%{ transform:rotateZ(2deg) translateX(1200px) translateY(34%) translateZ(0);}
+    }
+
+
+        
+    </style>
+    <script>
+                //tworzenie komara o randomowym położeniu na stronie
+        
+        function komar(){
+            var dowolna = Math.floor(Math.random() * 1002);
+            var plik = "<img src=\"mosquito.gif\" style=\"position:absolute; top:"+dowolna+";"+"right:"+dowolna+";"+"height:100px;\">";
+            var martwy = "<img src=\"deadmosquito.png\" style=\"position:absolute; top:"+dowolna+";"+"right:"+dowolna+";"+"height:100px;"+"visibility:hidden;"+"\""+"class=\"deadmosquito\""+">";
+	       document.getElementById("komar").innerHTML=plik;
+	       document.getElementById("martwy").innerHTML=martwy;
+        }
+        function komar1(){
+            var dowolna1 = Math.floor(Math.random() * 1002);
+            var plik1 = "<img src=\"mosquito.gif\" style=\"position:absolute; top:"+dowolna1+";"+"right:"+dowolna1+";"+"height:100px;\">";
+            var martwy1 = "<img src=\"deadmosquito.png\" style=\"position:absolute; top:"+dowolna1+";"+"right:"+dowolna1+";"+"height:100px;"+"visibility:hidden;"+"\""+"class=\"deadmosquito1\""+">";
+	       document.getElementById("komar1").innerHTML=plik1;
+            document.getElementById("martwy1").innerHTML=martwy1;
+        }
+        function komar2(){
+            var dowolna2 = Math.floor(Math.random() * 1002);
+            var plik2 = "<img src=\"mosquito.gif\" style=\"position:absolute; top:"+dowolna2+";"+"right:"+dowolna2+";"+"height:100px;\">";
+            var martwy2 = "<img src=\"deadmosquito.png\" style=\"position:absolute; top:"+dowolna2+";"+"right:"+dowolna2+";"+"height:100px;"+"visibility:hidden;"+"\""+"class=\"deadmosquito2\""+">";
+	       document.getElementById("komar2").innerHTML=plik2;
+            document.getElementById("martwy2").innerHTML=martwy2;
+        }
+        function komar3(){
+            var dowolna3 = Math.floor(Math.random() * 1002);
+            var plik3 = "<img src=\"mosquito.gif\" style=\"position:absolute; top:"+dowolna3+";"+"right:"+dowolna3+";"+"height:100px;\">";
+            var martwy3 = "<img src=\"deadmosquito.png\" style=\"position:absolute; top:"+dowolna3+";"+"right:"+dowolna3+";"+"height:100px;"+"visibility:hidden;"+"\""+"class=\"deadmosquito3\""+">";
+	       document.getElementById("komar3").innerHTML=plik3;
+            document.getElementById("martwy3").innerHTML=martwy3;
+        }
+        function komar4(){
+            var dowolna4 = Math.floor(Math.random() * 1002);
+            var plik4 = "<img src=\"mosquito.gif\" style=\"position:absolute; top:"+dowolna4+";"+"right:"+dowolna4+";"+"height:100px;\">";
+            var martwy4 = "<img src=\"deadmosquito.png\" style=\"position:absolute; top:"+dowolna4+";"+"right:"+dowolna4+";"+"height:100px;"+"visibility:hidden;"+"\""+"class=\"deadmosquito4\""+">";
+	       document.getElementById("komar4").innerHTML=plik4;
+            document.getElementById("martwy4").innerHTML=martwy4;
+        }
+                       komar(); komar1(); komar2(); komar3(); komar4();aktualizuj();
+        
+ 
+        
+                //liczenie punktow za zabijanie komara i odejmowanie za nie zabicie
+        
+        function punkty(){
+        var punkty = 0;
+        document.querySelector("#komar").addEventListener('click', function(){
+            $(document).ready(function(){
+                $('#komar').css('visibility', 'hidden');
+                $('.deadmosquito').css('visibility', 'visible');
+                
+
+            }); 
+                punkty= punkty +5; aktualizuj();
+            
+        });
+        document.querySelector("#komar1").addEventListener('click', function(){
+            $(document).ready(function(){
+                $('#komar1').css('visibility', 'hidden');
+                $('.deadmosquito1').css('visibility', 'visible');
+
+            }); 
+                punkty= punkty +5; aktualizuj();
+        });
+        document.querySelector("#komar2").addEventListener('click', function(){
+            $(document).ready(function(){
+                $('#komar2').css('visibility', 'hidden');
+                $('.deadmosquito2').css('visibility', 'visible');
+
+            }); 
+                punkty= punkty +5; aktualizuj();
+        });
+        document.querySelector("#komar3").addEventListener('click', function(){
+            $(document).ready(function(){
+                $('#komar3').css('visibility', 'hidden');
+                $('.deadmosquito3').css('visibility', 'visible');
+
+            }); 
+                punkty= punkty +5; aktualizuj();
+        });
+        document.querySelector("#komar4").addEventListener('click', function(){
+            $(document).ready(function(){
+                $('#komar4').css('visibility', 'hidden');
+                $('.deadmosquito4').css('visibility', 'visible');
+
+            }); 
+                punkty= punkty +5; aktualizuj();
+        });
+
+                
+        function aktualizuj(){
+            document.getElementById("wynik").innerHTML="Punkty: "+punkty; 
+            if (punkty<-10){
+                
+            }
+        }
+            aktualizuj();
+        }
+
+    </script>
+
+</head>
+<body onload="punkty(); komar(); komar1(); komar2(); komar3(); komar4();">
+    <div id="wynik"> </div>
+    <div id="komar"></div>
+        <div id="martwy"></div>
+    <div id="komar1"></div>
+        <div id="martwy1"></div>
+    <div id="komar2"></div>
+        <div id="martwy2"></div>
+    <div id="komar3"></div>
+        <div id="martwy3"></div>
+    <div id="komar4"></div>
+        <div id="martwy4"></div>
+
+
+
+    
+</body>
+</html>

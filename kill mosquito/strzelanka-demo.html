@@ -1,0 +1,96 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+        body {
+              cursor: crosshair;
+            background-image: url(mosquito-wallpaper.jpg);
+            }
+        .wynik{
+            position:absolute;
+            top:10px;
+            right:10px;
+            
+        }
+
+
+
+
+        
+    </style>
+   
+
+</head>
+<body>
+
+<div id="wynik"></div>
+    
+    
+    <script>
+                //tworzenie komara o randomowym położeniu na stronie
+    
+        function creator(){
+            var randomTop = Math.floor(Math.random()*1002);
+            var randomRight = Math.floor(Math.random()*1002); 
+            var createdImg = document.createElement("img");
+            createdImg.src = "mosquito.gif";
+            createdImg.style = "position:absolute; top:"+randomTop+";"+"right:"+randomRight+";"+"height:100px;"+"visibility:visible;";
+            
+               
+            var deadImg = document.createElement("img");
+            deadImg.src="deadmosquito.png";
+            deadImg.style = "position:absolute; top:"+randomTop+";"+"right:"+randomRight+";"+"height:100px;"+"visibility:hidden;";
+            
+            var random = Math.floor(Math.random());
+            var divAlive = document.createElement("div");
+            divAlive.id = "mosquito" +random;
+            document.body.appendChild(divAlive);
+            
+            var divDead = document.createElement("div");
+            divDead.id= "dead"+random;
+            document.body.appendChild(divDead);
+            
+	       
+            divAlive.appendChild(createdImg);
+            divDead.append(deadImg);
+            
+            
+        }
+        
+        
+        
+         
+        
+        
+        function punkty(){
+        var points = 0;
+        document.querySelector("#mosquito0").addEventListener('click', function(){
+            $(document).ready(function(){
+                $('#mosquito0').css('visibility', 'hidden');
+                $('#dead0').css('visibility', 'visible');
+                
+
+            }); 
+                points = points +5; aktualizuj();
+            
+        });
+
+                
+        function aktualizuj(){
+            document.getElementById("wynik").innerHTML="Punkty: "+points; 
+
+        }
+            aktualizuj();
+        }
+
+                
+
+            
+        
+         creator(); punkty; aktualizuj();
+     
+    </script>
+    
+</body>
+</html>

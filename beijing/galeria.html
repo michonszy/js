@@ -1,0 +1,313 @@
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Gochi+Hand" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <style>
+
+        @font-face {
+            font-family: Karate;
+            src: url(Karate.ttf);
+            }
+      .header{
+            height:600px;
+            width:100%;
+            background-image: url("https://techcode-germany.com/home/wp-content/uploads/2017/04/china.jpg");
+            min-height: 500px; 
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            top:0;
+            left:0;
+           
+            }
+      .menu{
+                margin-top: 80px;
+                margin-left: 10px;
+                margin-right: 10px;
+                height:50px;
+                width:98.5%;
+                background-color: dimgrey;
+                font-family: 'Karate';
+                font-size: 30px;
+                background-color: rgba(51,51,51);
+            }
+
+        .content{
+            width:100%;
+            height: auto;
+            position: absolute;
+            top:650px;
+            left:0;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        #logo{
+                position:absolute;
+                left:43%;
+                top:2%;
+                height: 60px;
+                  
+            }
+        #down-click{
+            position:absolute;
+            bottom:10%;
+            margin-left: 46%;  
+            height:50px;
+            width: 50px;
+            border-radius: 60px;
+            background-color: white;
+            outline:none;
+            
+        }
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: rgba(51,51,51);
+                position: absolute;
+                left:25%;
+                
+            }
+
+            li {
+                float: left;
+                color: white;
+                text-align: center;
+               
+            }
+
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 7px 16px;
+                text-decoration: none;
+            }
+
+        
+            li a:hover {
+                background-color: #111;
+            }
+            
+            
+            a:link{
+                text-decoration: none;
+            }
+            a:visited{
+                text-decoration: none;
+            }
+        a{text-decoration: none;}
+
+                    /* WYSKAKUJACE OKIENKO Z ZDJECIEM */
+        #image{
+                border-radius: 5px;
+                cursor: pointer;
+                transition: 0.3s;
+                width:300px;
+                height:200px;
+        }
+        #image:hover {opacity: 0.7;}
+        
+        #zoom , #zoom1 , #zoom2, #zoom3, #zoom4, #zoom5, #zoom6, #zoom7{
+                width:100%;
+                height:100%;
+                background-color:rgba(0,0,0, 0.7);
+                z-index:4;
+                position:fixed;
+                top:0px;
+                left:0px;
+                visibility: hidden;
+                text-align: center;
+        }
+        .closebtn {
+                    font-size: 50px;
+                    top: 15px;
+                    right: 35px;
+                    color: crimson;
+                }
+        .closebtn:hover{
+            opacity:0.8;
+        }
+        .footer{
+            position: absolute;
+            top:1200px;
+            left: 0;
+            width: 100%;
+            height: 200px;
+            background-color: rgba(51,51,51);
+        }
+        .social{
+            position: absolute;
+            bottom:75px;
+            left: 35%;
+            color: white;
+        }
+        .social i{
+            margin-right: 50px;
+            color: white;
+        }
+        .social i:hover{
+            opacity:0.2;
+            cursor: pointer;
+        }
+    </style>
+
+
+</head>
+    
+     <script>
+    
+
+        function showImage(){
+            document.getElementById("zoom").style.visibility = "visible";
+        }
+        function closeImage(){
+            document.getElementById("zoom").style.visibility = "hidden";
+        }
+         
+                 function showImage1(){
+            document.getElementById("zoom1").style.visibility = "visible";
+        }
+        function closeImage1(){
+            document.getElementById("zoom1").style.visibility = "hidden";
+        }
+         
+                 function showImage2(){
+            document.getElementById("zoom2").style.visibility = "visible";
+        }
+        function closeImage2(){
+            document.getElementById("zoom2").style.visibility = "hidden";
+        }
+         
+                 function showImage3(){
+            document.getElementById("zoom3").style.visibility = "visible";
+        }
+        function closeImage3(){
+            document.getElementById("zoom3").style.visibility = "hidden";
+        }
+         
+                 function showImage4(){
+            document.getElementById("zoom4").style.visibility = "visible";
+        }
+        function closeImage4(){
+            document.getElementById("zoom4").style.visibility = "hidden";
+        }
+         
+                 function showImage5(){
+            document.getElementById("zoom5").style.visibility = "visible";
+        }
+        function closeImage5(){
+            document.getElementById("zoom5").style.visibility = "hidden";
+        }
+         
+                 function showImage6(){
+            document.getElementById("zoom6").style.visibility = "visible";
+        }
+        function closeImage6(){
+            document.getElementById("zoom6").style.visibility = "hidden";
+        }
+         
+                 function showImage7(){
+            document.getElementById("zoom7").style.visibility = "visible";
+        }
+        function closeImage7(){
+            document.getElementById("zoom7").style.visibility = "hidden";
+        }
+         
+         
+         
+    </script>
+    
+    
+<body>
+   
+    <div class="header">
+     <img src="logo.png" id="logo">
+        <div class="menu"> 
+            <ul>
+               <li> <a href="index.html">GLOWNA</a> </li>
+               <li> <a href="galeria.html">GALERIA</a> </li>
+               <li> <a href="hotele.html">HOTELE</a> </li>
+               <li> <a href="kontakt.html">KONTAKT</a> </li>
+            </ul>
+        </div>
+     
+    </div> 
+<div class="content">
+        <div class="images">
+                        <img src=" http://farm6.staticflickr.com/5485/10378347894_a141976ff4.jpg" id="image" onclick="showImage()">
+                        <img src=" https://www.thechinaguide.com/uploads/201701/12/587739a87e4d4.jpg" id="image"  onclick="showImage1()">
+                        <img src="https://fthmb.tqn.com/PmOSohpxQqiilh2n61LJcfNaHxs=/960x0/filters:no_upscale():max_bytes(150000):strip_icc()/tiananmen-square-beijing-598b69ead088c00011ce40e0.jpg " id="image"  onclick="showImage2()">
+                        <img src=" https://drwyjmricaxm7.cloudfront.net/repository/Stretch-of-the-Great-Wall-of-China--China-Tours--On-The-Go-Tours-279841450457645_crop_683_341.jpg" id="image"  onclick="showImage3()">
+            
+                        <img src=" https://static1.squarespace.com/static/5a44c8146f4ca34400e7c3c4/5a7834969140b7829844a270/5a783497085229a61697a1d9/1517827228026/22_beijing.jpg?format=2500w" id="image"  onclick="showImage4()">
+                        <img src=" http://csa-eur.nl/wp-content/uploads/2017/11/Temple-of-Heaven-in-Beijing-China.jpg" id="image"  onclick="showImage5()">
+                        <img src=" https://mandelan.eu/images/products/14866449936308.jpg" id="image"  onclick="showImage6()">
+                        <img src=" https://res.cloudinary.com/djcyhbk2e/image/upload/c_limit,f_auto,q_50,w_1400/v1/gvv/prod/lct1psad6bc4wcpc7cs7" id="image"  onclick="showImage7()">
+            
+           
+    </div>
+
+</div>
+        <div id="zoom">
+        <img src="http://farm6.staticflickr.com/5485/10378347894_a141976ff4.jpg" style="width:40%; height:auto; margin-top: 10%;">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeImage()" style="position:fixed;top:20px; right:100px; height:100px; width:100px;">&times;</a>
+        </div>
+    
+            <div id="zoom1">
+        <img src="https://www.thechinaguide.com/uploads/201701/12/587739a87e4d4.jpg" style="width:40%; height:auto; margin-top: 10%;">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeImage1()" style="position:fixed;top:20px; right:100px; height:100px; width:100px;">&times;</a>
+        </div>
+    
+            <div id="zoom2">
+        <img src="https://fthmb.tqn.com/PmOSohpxQqiilh2n61LJcfNaHxs=/960x0/filters:no_upscale():max_bytes(150000):strip_icc()/tiananmen-square-beijing-598b69ead088c00011ce40e0.jpg " style="width:40%; height:auto; margin-top: 10%;">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeImage2()" style="position:fixed;top:20px; right:100px; height:100px; width:100px;">&times;</a>
+        </div>
+    
+            <div id="zoom3">
+        <img src="https://drwyjmricaxm7.cloudfront.net/repository/Stretch-of-the-Great-Wall-of-China--China-Tours--On-The-Go-Tours-279841450457645_crop_683_341.jpg" style="width:40%; height:auto; margin-top: 10%;">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeImage3()" style="position:fixed;top:20px; right:100px; height:100px; width:100px;">&times;</a>
+        </div>
+    
+            <div id="zoom4">
+        <img src="https://static1.squarespace.com/static/5a44c8146f4ca34400e7c3c4/5a7834969140b7829844a270/5a783497085229a61697a1d9/1517827228026/22_beijing.jpg?format=2500w" style="width:40%; height:auto; margin-top: 10%;">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeImage4()" style="position:fixed;top:20px; right:100px; height:100px; width:100px;">&times;</a>
+        </div>
+    
+            <div id="zoom5">
+        <img src="http://csa-eur.nl/wp-content/uploads/2017/11/Temple-of-Heaven-in-Beijing-China.jpg" style="width:40%; height:auto; margin-top: 10%;">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeImage5()" style="position:fixed;top:20px; right:100px; height:100px; width:100px;">&times;</a>
+        </div>
+    
+            <div id="zoom6">
+        <img src="https://mandelan.eu/images/products/14866449936308.jpg" style="width:40%; height:auto; margin-top: 10%;">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeImage6()" style="position:fixed;top:20px; right:100px; height:100px; width:100px;">&times;</a>
+        </div>
+    
+            <div id="zoom7">
+        <img src=" https://res.cloudinary.com/djcyhbk2e/image/upload/c_limit,f_auto,q_50,w_1400/v1/gvv/prod/lct1psad6bc4wcpc7cs7" style="width:40%; height:auto; margin-top: 10%;">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeImage7()" style="position:fixed;top:20px; right:100px; height:100px; width:100px;">&times;</a>
+        </div>
+    
+<div class="footer"> 
+    <div class="social">
+        <a href="https://www.facebook.com/" ><i class="fab fa-facebook fa-3x" ></i></a>
+        <a href="http://twitter.pl/"><i class="fab fa-twitter fa-3x"></i> </a>
+        <a href="https://www.google.pl/"><i class="fab fa-google-plus-g fa-3x"></i> </a>
+        <a href="https://www.tripadvisor.com/"><i class="fab fa-tripadvisor fa-3x"></i> </a>
+    </div>
+
+<hr style="position: absolute; bottom:35px; width:100%;">
+    <h1 style="position:absolute;bottom:0px; right:46%; font-size: 18; color:black;">&copy;Szymon Michoń 2018</h1>
+</div>
+    
+    
+
+    
+
+</body>
+</html>

@@ -1,0 +1,184 @@
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Gochi+Hand" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <style>
+        @font-face {
+            font-family: Karate;
+            src: url(Karate.ttf);
+            }
+      .header{
+            height:600px;
+            width:100%;
+            background-image: url("https://techcode-germany.com/home/wp-content/uploads/2017/04/china.jpg");
+            min-height: 500px; 
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            top:0;
+            left:0;
+           
+            }
+      .menu{
+                margin-top: 80px;
+                margin-left: 10px;
+                margin-right: 10px;
+                height:50px;
+                width:98.5%;
+                background-color: dimgrey;
+                font-family: 'Karate';
+                font-size: 30px;
+                background-color: rgba(51,51,51);
+            }
+
+
+
+        #logo{
+                position:absolute;
+                left:43%;
+                top:2%;
+                height: 60px;
+                  
+            }
+
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: rgba(51,51,51);
+                position: absolute;
+                left:25%;
+                
+            }
+
+            li {
+                float: left;
+                color: white;
+                text-align: center;
+               
+            }
+
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 7px 16px;
+                text-decoration: none;
+            }
+
+        
+            li a:hover {
+                background-color: #111;
+            }
+            
+            
+            a:link{
+                text-decoration: none;
+            }
+            a:visited{
+                text-decoration: none;
+            }
+
+        .content{
+            width:100%;
+            height: auto;
+            position: absolute;
+            top:650px;
+            left:0;
+            margin-bottom: 50px;
+            text-align: center;
+            
+        }
+        h2{
+            font-family: "Karate";
+            font-size: 45;
+        }
+        input{
+            width: 350px;
+            height: 60px;
+            border-radius: 5px;
+        }
+        input[type=submit]:hover{
+            background-color: rgba(51,51,51);
+            color: whitesmoke;
+        }
+        .footer{
+            position: absolute;
+            top:1200px;
+            left: 0;
+            width: 100%;
+            height: 200px;
+            background-color: rgba(51,51,51);
+        }
+                .social{
+            position: absolute;
+            bottom:75px;
+            left: 35%;
+            color: white;
+        }
+        .social i{
+            margin-right: 50px;
+            color: white;
+        }
+        .social i:hover{
+            opacity:0.2;
+            cursor: pointer;
+        }
+    </style>
+
+<script>
+    
+
+    </script>
+</head>
+<body>
+    <div class="header">
+     <img src="logo.png" id="logo">
+        <div class="menu"> 
+            <ul>
+               <li> <a href="index.html">GLOWNA</a> </li>
+               <li> <a href="galeria.html">GALERIA</a> </li>
+               <li> <a href="hotele.html">HOTELE</a> </li>
+               <li> <a href="kontakt.html">KONTAKT</a> </li>
+            </ul>
+        </div>
+      
+    </div> 
+<div class="content">
+<div id="baner">
+    <h2>KONTAKT</h2>
+    <h4>W przypadku dodatkowych pytań czy rezerwacji skontaktuj się z nami według poniższego formularza</h4>
+    </div>
+    
+    
+    <!--DODAĆ SPRAWDZENIE FORMATU EMAILA, PODPOWIEDZI I NA CZERWONO WYSKAKUJĄCE BŁĘDY -->
+    
+    <div id="form">
+            <form method="post" name="contact_form" action="kontakt-thanks.html">
+                <input type="text" name="name" placeholder="Wpisz imie">
+                <input type="text" name="email" placeholder="Wpisz adres email"><br>
+                <textarea name="message" style="width:700px; height: 200px; border-radius: 5px;" placeholder="Wpisz wiadomość"></textarea><br><br>
+                <input type="submit" value="WYŚLIJ" style="cursor: pointer;">
+            </form>	
+    </div>
+    
+</div>
+<div class="footer"> 
+    <div class="social">
+        <a href="https://www.facebook.com/" ><i class="fab fa-facebook fa-3x" ></i></a>
+        <a href="http://twitter.pl/"><i class="fab fa-twitter fa-3x"></i> </a>
+        <a href="https://www.google.pl/"><i class="fab fa-google-plus-g fa-3x"></i> </a>
+        <a href="https://www.tripadvisor.com/"><i class="fab fa-tripadvisor fa-3x"></i> </a>
+    </div>
+
+<hr style="position: absolute; bottom:35px; width:100%;">
+    <h1 style="position:absolute;bottom:0px; right:46%; font-size: 18; color:black;">&copy;Szymon Michoń 2018</h1>
+</div>
+    
+    
+
+</body>
+</html>

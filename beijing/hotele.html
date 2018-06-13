@@ -1,0 +1,355 @@
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Gochi+Hand" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <style>
+        @font-face {
+            font-family: Karate;
+            src: url(Karate.ttf);
+            }
+      .header{
+            height:600px;
+            width:100%;
+            background-image: url("https://techcode-germany.com/home/wp-content/uploads/2017/04/china.jpg");
+            min-height: 500px; 
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            top:0;
+            left:0;
+           
+            }
+      .menu{
+            margin-top: 80px;
+            margin-left: 10px;
+            margin-right: 10px;
+            height:50px;
+            width:98.5%;
+            background-color: dimgrey;
+            font-family: 'Karate';
+            font-size: 30px;
+            background-color: rgba(51,51,51);
+            }
+
+
+        .content{
+            width:100%;
+            height: auto;
+            position: absolute;
+            top:650px;
+            left:0;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+        #logo{
+             position:absolute;
+            left:43%;
+            top:2%;
+            height: 60px;
+                  
+            }
+        #down-click{
+            position:absolute;
+            bottom:10%;
+            margin-left: 46%;  
+            height:50px;
+            width: 50px;
+            border-radius: 60px;
+            background-color: white;
+            outline:none;
+            
+        }
+          .menu  ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: rgba(51,51,51);
+                position: absolute;
+                left:25%;
+                
+            }
+
+        .menu    li {
+                float: left;
+                color: white;
+                text-align: center;
+               
+            }
+
+          .menu  li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 7px 16px;
+                text-decoration: none;
+            }
+
+        
+          .menu  li a:hover {
+                background-color: #111;
+            }
+            
+            
+      .menu      a:link{
+                text-decoration: none;
+            }
+         .menu   a:visited{
+                text-decoration: none;
+            }
+
+        .hotel1, .hotel2, .hotel3, .hotel4{
+            margin-left: 50px;
+            width: 90%;
+            height:255px;
+        }
+        .hotel1{
+            position:relative;
+            top: 100px;
+            visibility: visible;
+        }
+        .hotel2{
+            position:relative;
+            top:100px;
+            visibility: visible;
+        }
+        .hotel3{
+            position:relative;
+            top:100px;
+            visibility: visible;
+        }
+        .hotel4{
+            position:relative;
+            top:100px;
+            visibility: visible;
+        }
+        .hotel1:hover{ background-color: rgba(51,51,51,0.5); transform: scale(1.01); cursor: pointer;}
+        .hotel2:hover{ background-color: rgba(51,51,51,0.5); transform: scale(1.01); cursor: pointer;}
+        .hotel3:hover{ background-color: rgba(51,51,51,0.5); transform: scale(1.01); cursor: pointer;}
+        .hotel4:hover{ background-color: rgba(51,51,51,0.5); transform: scale(1.01); cursor: pointer;}
+       #img1{
+            position:absolute;
+            top:2px;
+            left:2px;
+            height:250px;
+            width: 320px;
+        }
+        h2{
+            font-family: "Karate";
+            font-size: 38;
+            position: absolute;
+            left:400px;
+            white-space: nowrap;
+        }
+        h4{
+            position: absolute;
+            left:400px;
+            white-space: nowrap;
+            font-size: 12;
+        }
+        .icons{
+            position: absolute;
+            left: 400px;
+            bottom:50px;
+            font-size: 12;
+        }
+        .price{
+            position: absolute;
+            right: 200px;
+            top: 50px;
+            
+        }
+        h5{
+            color: yellowgreen;
+            font-family: "Karate";
+            font-size: 42;
+        }
+        .footer{
+            position: absolute;
+            top:2000px;
+            left: 0;
+            width: 100%;
+            height: 200px;
+            background-color: rgba(51,51,51);
+        }
+                .social{
+            position: absolute;
+            bottom:75px;
+            left: 35%;
+            color: white;
+        }
+        .social i{
+            margin-right: 50px;
+            color: white;
+        }
+        .social i:hover{
+            opacity:0.2;
+            cursor: pointer;
+        }
+  
+        input[type=text] {
+            width: 300px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            background-color: white;
+            background-image: url('https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-512.png');
+            background-position: 10px 8px; 
+            background-size: 25px 25px;
+            background-repeat: no-repeat;
+            position:absolute;
+            top:20px;
+            left: 50px;
+            padding: 12px 20px 12px 40px;
+            
+            -webkit-transition: width 0.4s ease-in-out;
+            transition: width 0.4s ease-in-out;
+        }
+
+        input[type=text]:focus {
+            width: 90%;
+        }
+        
+        
+        #myUL {
+          padding: 0;
+          margin: 0;
+        }
+
+        #myUL li a {
+          text-decoration: none;
+          color: black;
+        }
+
+
+    </style>
+
+
+    
+    <script>
+function searchHotels() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("searchbar");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+            
+        } else {
+            li[i].style.display = "none";
+
+        }
+    }
+}
+</script>
+</head>
+<body>
+    <div class="header">
+     <img src="logo.png" id="logo">
+        <div class="menu"> 
+            <ul>
+               <li> <a href="index.html">GLOWNA</a> </li>
+               <li> <a href="galeria.html">GALERIA</a> </li>
+               <li> <a href="hotele.html">HOTELE</a> </li>
+               <li> <a href="kontakt.html">KONTAKT</a> </li>
+            </ul>
+        </div>
+   
+    </div> 
+<div class="content">
+    <input type="text" id="searchbar" onkeyup="searchHotels()" placeholder="Szukaj hotelu.." title="Szukaj hotelu">
+
+<ul id="myUL">
+<li><a href="#">   <div class="hotel1">
+    <img src="https://d3vonci41uckcv.cloudfront.net/old-images/original/d5342603-828d-4014-9ebc-9e6043af9fb5.jpg" id="img1">
+    <h2>Hotel Beijing</h2><br><br><br>
+    <h4>PEKIN/DONZINGHMEN</h4>
+    <div class="icons">
+        <i class="far fa-paper-plane"></i> <h7 style="margin-right: 10px;">Warszawa   (07:05)</h7>
+        <i class="fas fa-utensils"></i>    <h7>All Inclusive</h7> <br><br>
+        <i class="far fa-calendar"></i>    <h7 style="margin-right: 10px;">14.12.2018 (3 dni)</h7>
+        <i class="fas fa-smile"></i>       <h7>Ocena: 8/10</h7>
+        
+    </div>
+    <div class="price">
+    <h5>1 700 zł / osoba</h5>    
+    </div>
+    </div>
+   </a></li> 
+    
+<li><a href="#">   <div class="hotel2">
+    <img src="https://i.pinimg.com/originals/b6/59/4c/b6594ccb99a3975943d8d78c66caec67.jpg" id="img1">
+     <h2>WUSHU Hotel</h2><br><br><br> 
+    <h4>PEKIN/LIULICHANG</h4>
+    <div class="icons">
+        <i class="far fa-paper-plane"></i> <h7 style="margin-right: 10px;">Warszawa   (12:45)</h7>
+        <i class="fas fa-utensils"></i>    <h7>Śniadanie</h7> <br><br>
+        <i class="far fa-calendar"></i>    <h7 style="margin-right: 10px;">13.09.2018 (5 dni)</h7>
+        <i class="fas fa-meh"></i>         <h7>Ocena: 4/10</h7>
+        
+    </div>
+    <div class="price">
+    <h5>2 600 zł / osoba</h5>    
+    </div>
+    </div>
+    </a></li> 
+    
+<li><a href="#">   <div class="hotel3">
+    <img src="https://t-ec.bstatic.com/xdata/images/hotel/max500/132884346.jpg?k=f6df016a22901cbb3187cb6e07d308a3975630478bfe84a3caa13f15b48ad7ae&o=" id="img1">
+    <h2>Pekin Palace</h2><br><br><br>
+    <h4>PEKIN/ONSEN</h4>
+    <div class="icons">
+        <i class="far fa-paper-plane"></i> <h7 style="margin-right: 10px;">Katowice   (18:05)</h7>
+        <i class="fas fa-utensils"></i>    <h7>All Inclusive</h7> <br><br>
+        <i class="far fa-calendar"></i>    <h7 style="margin-right: 10px;">14.12.2018 (9 dni)</h7>
+        <i class="fas fa-smile"></i>       <h7>Ocena: 9.3/10</h7>
+        
+    </div>
+    <div class="price">
+    <h5>8 600 zł / osoba</h5>    
+    </div>
+    </div>
+    </a></li> 
+    
+    
+<li><a href="#">   <div class="hotel4">
+    <img src="https://d3vonci41uckcv.cloudfront.net/old-images/original/d5342603-828d-4014-9ebc-9e6043af9fb5.jpg" id="img1">
+    <h2>Ninjutsu Secret</h2><br><br><br> 
+    <h4>PEKIN/DONZINGHMEN</h4>
+    <div class="icons">
+        <i class="far fa-paper-plane"></i> <h7 style="margin-right: 10px;">Wrocław   (16:35)</h7>
+        <i class="fas fa-utensils"></i>    <h7>All Inclusive</h7> <br><br>
+        <i class="far fa-calendar"></i>    <h7 style="margin-right: 10px;">24.11.2018 (8dni)</h7>
+        <i class="fas fa-frown"></i>       <h7>Ocena: 3/10</h7>
+        
+    </div>
+    <div class="price">
+    <h5>2 300 zł / osoba</h5>    
+    </div>
+    </div>
+    </a></li> 
+    </ul>  
+    
+</div>
+
+<div class="footer"> 
+    <div class="social">
+        <a href="https://www.facebook.com/" ><i class="fab fa-facebook fa-3x" ></i></a>
+        <a href="http://twitter.pl/"><i class="fab fa-twitter fa-3x"></i> </a>
+        <a href="https://www.google.pl/"><i class="fab fa-google-plus-g fa-3x"></i> </a>
+        <a href="https://www.tripadvisor.com/"><i class="fab fa-tripadvisor fa-3x"></i> </a>
+    </div>
+
+<hr style="position: absolute; bottom:35px; width:100%;">
+    <h1 style="position:absolute;bottom:0px; right:46%; font-size: 18; color:black;">&copy;Szymon Michoń 2018</h1>
+</div>
+    
+    
+</body>
+</html>

@@ -1,0 +1,123 @@
+  #menu{
+                height:50px;
+                width:99%;
+                background-color: dimgrey;
+                font-family: 'Gochi Hand';
+                font-size: 30px;
+                position: absolute;
+            }
+            
+            #content{
+                position:absolute;
+                top:25%;
+                left:15%;
+            }
+            #results{
+                position:absolute;
+                bottom:10%;
+                left:15%;
+                visibility: hidden;
+            }
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #333;
+                
+            }
+
+            li {
+                float: left;
+                color: white;
+                text-align: center;
+               
+            }
+
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 7px 16px;
+                text-decoration: none;
+            }
+
+        
+            li a:hover {
+                background-color: #111;
+            }
+            
+            
+            a:link{
+                text-decoration: none;
+            }
+            a:visited{
+                text-decoration: none;
+            }
+            
+            #triangle{
+                position:absolute;
+                top:25%;
+                right:10%
+                
+            }
+
+            .overlay {
+
+                height: 100%;
+                width: 0;
+                position: fixed; 
+                z-index: 1; 
+                left: 0;
+                top: 0;
+                background-color: rgb(0,0,0); 
+                background-color: rgba(0,0,0, 0.9); 
+                overflow-x: hidden; 
+                transition: 0.5s; 
+            }
+
+
+            .overlay-content {
+                position: relative;
+                top: 25%; 
+                width: 100%; 
+                text-align: center; 
+                margin-top: 30px; 
+            }
+            .overlay a {
+                padding: 8px;
+                text-decoration: none;
+                font-size: 36px;
+                color: #818181;
+                display: block; 
+                transition: 0.3s; 
+            }
+
+
+            .overlay a:hover, .overlay a:focus {
+                color: #f1f1f1;
+            }
+
+
+            .overlay .closebtn {
+                position: absolute;
+                top: 20px;
+                right: 45px;
+                font-size: 60px;
+            }
+
+
+            @media screen and (max-height: 450px) {
+                .overlay a {font-size: 20px}
+                .overlay .closebtn {
+                    font-size: 40px;
+                    top: 15px;
+                    right: 35px;
+                }
+            }
+            .bar1, .bar2, .bar3 {
+                width: 35px;
+                height: 5px;
+                background-color: white;
+                margin: 8px 8px;
+            }
